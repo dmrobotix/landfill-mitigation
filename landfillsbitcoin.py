@@ -171,7 +171,7 @@ median_waste_in_place_common = np.median(waste_in_place_common) # chosen because
 
 total = lfg_generated_common_per_ktonne_per_year*median_waste_in_place_common*(1-fraction_efficiency/100)
 print("---")
-print("the unmitigated methane that remains uncaptured: ", total)
+print("the unmitigated methane that remains uncaptured (kg of CH4/year): ", total)
 ax.hist(waste_in_place_common)
 
 fig, ax = plt.subplots()

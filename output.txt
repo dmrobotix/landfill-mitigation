@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jan 27 17:27:34 2023
+
+@author: vpaez3
+"""
+
+# RESULTS
+median lfg collected (mmscfd): 1.1625
+median lfg generated (mmscfd): 2.1225
+median waste in place (tons) 6758788.5
+mean lfg collected (mmscfd): 2.137431718061674
+mean lfg generated (mmscfd) 3.4050572687224667
+mean waste in place (tons) 11257325.893171806
+---
+lfg not collected (mmscfd/kilotonne) -- using median values then computing the result:  0.00015656931097746645
+lfg not collected (mmscfd/kilotonne) -- computing result then taking median:  0.00012998042505624218
+---
+CH4 collected ((kg of CH4/day)/kilotonne) 2229.6980283630696
+CH4 not collected ((kg of CH4/day)/kilotonne) 1507.8999865179019
+CH4 generated ((kg of CH4/day)/kilotonne) 4197.624598186867
+---
+lfg collected ((kg of CH4/year)/kilotonne) 813839.7803525204
+lfg not collected ((kg of CH4/year)/kilotonne) 550383.4950790342
+lfg generated ((kg of CH4/year)/kilotonne) 1532132.9783382064
+---
+efficiency of LFG collection (%):  64.99494928409158
+=============
+common landfills only!
+---
+lfg not collected (mmscfd/kilotonne) -- using median values then computing the result:  0.0001692265531799702
+lfg not collected (mmscfd/kilotonne) -- computing result then taking median:  0.00014783257565438796
+---
+CH4 collected ((kg of CH4/day)/kilotonne) 2170.3877477908013
+CH4 not collected ((kg of CH4/day)/kilotonne) 1715.0023839336027
+CH4 generated ((kg of CH4/day)/kilotonne) 4343.308696514886
+---
+CH4 collected ((kg of CH4/year)/kilotonne) 792191.5279436425
+CH4 not collected ((kg of CH4/year)/kilotonne) 625975.8701357649
+CH4 generated ((kg of CH4/year)/kilotonne) 1585307.6742279334
+---
+efficiency of LFG collection (%):  60.00866551126517
+---
+the unmitigated methane that remains uncaptured (kg of CH4/year):  2856740893.1590996
