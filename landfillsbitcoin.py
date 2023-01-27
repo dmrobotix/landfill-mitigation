@@ -103,11 +103,28 @@ lfg_generated_per_tonne_per_year = np.median(lfg_generated_per_ktonne)*1e6*35.31
 # database based on the waste_in_place distribution.
 
 # this shows the distribution of waste in place in tons (for reference)
-plt.hist(waste_in_place)
-counts, bins = np.histogram(waste_in_place)
-plt.stairs(counts, bins)
+fig, ax = plt.subplots()
 
-wip_idx = np.where(np.array(waste_in_place) <= 13099)
+# the histogram of the data
+n, bins, patches = ax.hist(waste_in_place)
+
+ax.set_xlabel('Waste (kilotonnes)')
+ax.set_ylabel('Counts')
+ax.set_title(r'Histogram of Waste in Place')
+
+# Tweak spacing to prevent clipping of ylabel
+fig.tight_layout()
+plt.show()
+
+fig, ax = plt.subplots()
+ax.set_xlabel('Waste (kilotonnes)')
+ax.set_ylabel('Counts')
+ax.set_title(r'Histogram of Waste in Place with most common landfills')
+ax.hist(waste_in_place)
+#counts, bins = np.histogram(waste_in_place)
+
+
+wip_idx = np.where(np.array(waste_in_place) <= 13099) # taken from counts
 waste_in_place_common = waste_in_place[wip_idx[0]]
 lfg_generated_common = lfg_generated[wip_idx[0]]
 lfg_collected_common = lfg_collected[wip_idx[0]]
@@ -155,4 +172,10 @@ median_waste_in_place_common = np.median(waste_in_place_common) # chosen because
 total = lfg_generated_common_per_ktonne_per_year*median_waste_in_place_common*(1-fraction_efficiency/100)
 print("---")
 print("the unmitigated methane that remains uncaptured: ", total)
-plt.hist(waste_in_place_common)
+ax.hist(waste_in_place_common)
+
+fig, ax = plt.subplots()
+ax.set_xlabel('Waste (kilotonnes)')
+ax.set_ylabel('Counts')
+ax.set_title(r'Histogram of Waste in Place for Common Landfills')
+ax.hist(waste_in_place_common)
